@@ -57,7 +57,7 @@ const char* const dataRequestBody =
 // replace the series key value with stock name \"STOCK/US/XNYS/xxx\"
 ;
 
-const char* const buyRequestHeader =
+const char* const tradeRequestHeader =
   
 "POST [insert here]" // Copy the path. For me it looks like this : /v1/games/xxxx/ledgers/xxxx/trades
 " "
@@ -82,7 +82,7 @@ const char* const buyRequestHeader =
 "\r\n"
 ;
 
-const char* const buyRequestBody =
+const char* const tradeRequestBody =
   
 "{ \"djid\":\"xx-yyyyyy\",\"ledgerId\":\"xxxxxxxxxxxx\",\"tradeType\":\"xxx\",\"shares\":xx,\"expiresEndOfDay\":false,\"orderType\":\"Market\"}"
 ;
