@@ -51,13 +51,13 @@ const char* const dataRequestHeader =
 "\r\n"
 ;
 
-const char* const dataRequestBody = 
+const char* const dataRequestBody = // It downloads ticks (UTC), prices, Moving Average Convergence, Divergence (normal, Signal and Nist), Slow Stochastic Oscillator (%K, %D) and Fast Stochastic Oscillator (%k, %d)
  
 "{\"Step\":\"PT1M\",\"TimeFrame\":\"D1\",\"StartDate\":1670025600000,\"EndDate\":1670025600000,\"EntitlementToken\":\"cecc4267a0194af89ca343805a3e57af\",\"IncludeMockTick\":true,\"FilterNullSlots\":false,\"FilterClosedPoints\":true,\"IncludeClosedSlots\":false,\"IncludeOfficialClose\":true,\"InjectOpen\":false,\"ShowPreMarket\":true,\"ShowAfterHours\":false,\"UseExtendedTimeFrame\":true,\"WantPriorClose\":false,\"IncludeCurrentQuotes\":false,\"ResetTodaysAfterHoursPercentChange\":false,\"Series\":[{\"Key\":\"STOCK/US/XNYS/xxx\",\"Dialect\":\"Charting\",\"Kind\":\"Ticker\",\"SeriesId\":\"s1\",\"DataTypes\":[\"Last\"],\"Indicators\":[{\"Parameters\":[{\"Name\":\"ShowOpen\"},{\"Name\":\"ShowHigh\"},{\"Name\":\"ShowLow\"},{\"Name\":\"ShowPriorClose\",\"Value\":true},{\"Name\":\"Show52WeekHigh\"},{\"Name\":\"Show52WeekLow\"}],\"Kind\":\"OpenHighLowLines\",\"SeriesId\":\"i2\"},{\"Parameters\":[{\"Name\":\"Period\",\"Value\":\"50\"}],\"Kind\":\"SimpleMovingAverage\",\"SeriesId\":\"i3\"},{\"Parameters\":[],\"Kind\":\"Volume\",\"SeriesId\":\"i4\"},{\"Parameters\":[{\"Name\":\"EMA1\",\"Value\":12},{\"Name\":\"EMA2\",\"Value\":26},{\"Name\":\"SignalLine\",\"Value\":9}],\"Kind\":\"MovingAverageConvergenceDivergence\",\"SeriesId\":\"i5\"},{\"Parameters\":[{\"Name\":\"YearOverYear\"}],\"Kind\":\"EarningsEvents\",\"SeriesId\":\"i6\"},{\"Parameters\":[{\"Name\":\"Period\",\"Value\":14},{\"Name\":\"KSMAPeriod\",\"Value\":3},{\"Name\":\"DSMAPeriod\",\"Value\":3}],\"Kind\":\"StochasticOscillatorSlow\",\"SeriesId\":\"i7\"},{\"Parameters\":[{\"Name\":\"Period\",\"Value\":14},{\"Name\":\"DSMAPeriod\",\"Value\":3}],\"Kind\":\"StochasticOscillatorFast\",\"SeriesId\":\"i8\"}]}]}"
 // replace the series key value with stock name \"STOCK/US/XNYS/xxx\"
 ;
 
-const char* const tradeRequestHeader =
+const char* const tradeRequestHeader = 
   
 "POST [insert here]" // Copy the path. For me it looks like this : /v1/games/xxxx/ledgers/xxxx/trades
 " "
